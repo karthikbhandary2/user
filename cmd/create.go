@@ -2,7 +2,7 @@ package cmd
 
 import (
 	"fmt"
-	create "user/pkg"
+	create "github.com/karthikbhandary2/user/pkg"
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"

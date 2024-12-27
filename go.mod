@@ -1,4 +1,4 @@
-module user
+module github.com/karthikbhandary2/user
 
 go 1.23.4
 

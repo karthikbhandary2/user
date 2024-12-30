@@ -40,20 +40,26 @@ func init() {
   // Cobra supports persistent flags, which, if defined here,
   // will be global for your application.
 
-  rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.usercreation.yaml)")
+  rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.user.yaml)")
 
 
   // Cobra also supports local flags, which will only run
   // when this action is called directly.
-  rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+  // rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
   
   //create command flags
   rootCmd.PersistentFlags().StringP("username", "u","", "name used to create the user in the server. Eg: EmpID")
 	rootCmd.PersistentFlags().StringP("name", "n","", "actual name of the user. Eg: Dio Brando")
-  
+  rootCmd.PersistentFlags().StringP("version", "v", "", "version of the application")
+
   //bind flags to viper
-  viper.BindPFlag("username", createCmd.PersistentFlags().Lookup("username"))
-	viper.BindPFlag("name", createCmd.PersistentFlags().Lookup("name"))
+  viper.BindPFlag("username", rootCmd.PersistentFlags().Lookup("username"))
+	viper.BindPFlag("name", rootCmd.PersistentFlags().Lookup("name"))
+  viper.BindPFlag("version", rootCmd.PersistentFlags().Lookup("version"))
+
+  rootCmd.AddCommand(createCmd)
+  rootCmd.AddCommand(deleteCmd)
+  rootCmd.AddCommand(versionCmd)
 }
 
 

@@ -50,16 +50,16 @@ func init() {
   //create command flags
   rootCmd.PersistentFlags().StringP("username", "u","", "name used to create the user in the server. Eg: EmpID")
 	rootCmd.PersistentFlags().StringP("name", "n","", "actual name of the user. Eg: Dio Brando")
-  rootCmd.PersistentFlags().StringP("version", "v", "", "version of the application")
+  // rootCmd.PersistentFlags().StringP("version", "v", "", "version of the application")
 
   //bind flags to viper
   viper.BindPFlag("username", rootCmd.PersistentFlags().Lookup("username"))
 	viper.BindPFlag("name", rootCmd.PersistentFlags().Lookup("name"))
   viper.BindPFlag("version", rootCmd.PersistentFlags().Lookup("version"))
 
-  rootCmd.AddCommand(createCmd)
-  rootCmd.AddCommand(deleteCmd)
-  rootCmd.AddCommand(versionCmd)
+  // rootCmd.AddCommand(createCmd)
+  // rootCmd.AddCommand(deleteCmd)
+  // rootCmd.AddCommand(versionCmd)
 }
 
 

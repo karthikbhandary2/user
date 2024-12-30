@@ -37,7 +37,7 @@ var deleteCmd = &cobra.Command{
 		}
 
 		// Print values for debugging
-		fmt.Printf("Deleting user: Username=%s\n", username)
+		fmt.Printf("Deleting user with Username=%s\n", username)
 
 		// Call the function and handle errors
 		err := delete.DeleteUser(username)

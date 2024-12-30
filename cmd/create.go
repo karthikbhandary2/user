@@ -24,7 +24,7 @@ var createCmd = &cobra.Command{
 		}
 
 		// Print values for debugging
-		fmt.Printf("Creating user: Username=%s, Name=%s\n", username, name)
+		fmt.Printf("Creating user with Username=%s, Name=%s\n", username, name)
 
 		// Call the function and handle errors
 		err := create.CreateUser(username, name)

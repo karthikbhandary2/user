@@ -13,7 +13,7 @@ var versionCmd = &cobra.Command{
 	Short: "Get the current version",
 	Long: ``,
 	Run: func(cmd *cobra.Command, args []string) {
-		version = "v0.1.1"
+		version = "v0.1.2"
 		if version == "" {
 			version = "v"
 		}

@@ -3,6 +3,8 @@
 This open-source package allows you to create users on your Linux server with ease. It is designed for simplicity and compatibility with most Linux distributions.
 
 **Note**: Currently, this package supports only Ubuntu (x86_64).
+
+To install this use: `go install github.com/karthikbhandary2/user@version`
 ## Future Enhancements
 
 I am actively working on adding more features to enhance functionality and usability.
